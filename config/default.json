@@ -1,0 +1,49 @@
+{
+  "acquisition": {
+    "camera_id": 0,
+    "frame_width": 640,
+    "frame_height": 480,
+    "target_fps": 30
+  },
+  "features": {
+    "min_detection_confidence": 0.5,
+    "min_tracking_confidence": 0.5,
+    "enable_attention_mesh": true
+  },
+  "cognitive": {
+    "sequence_length": 60,
+    "model_type": "lstm",
+    "hidden_size": 128,
+    "num_layers": 2,
+    "personalization_enabled": true,
+    "adaptation_rate": 0.01
+  },
+  "estimation": {
+    "update_interval_seconds": 1.0,
+    "smoothing_factor": 0.3,
+    "trend_window_size": 30
+  },
+  "genai": {
+    "provider": "openrouter",
+    "model": "meta-llama/llama-3.1-8b-instruct:free",
+    "api_key": "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",
+    "base_url": "https://openrouter.ai/api/v1",
+    "max_tokens": 150,
+    "temperature": 0.7,
+    "explanation_interval_seconds": 30
+  },
+  "ui": {
+    "notification_enabled": true,
+    "notification_interval_seconds": 60,
+    "enable_sounds": false,
+    "theme": "dark",
+    "dashboard_refresh_rate": 1.0
+  },
+  "privacy": {
+    "store_raw_video": false,
+    "store_landmarks": false,
+    "data_retention_days": 30,
+    "local_processing_only": false,
+    "anonymize_cloud_requests": true
+  }
+}
